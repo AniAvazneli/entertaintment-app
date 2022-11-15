@@ -8,25 +8,25 @@ const Home = ({ data }) => {
   return (
     <Grid>
       {data.map((movie) => {
-        console.log(movie);
         return (
-          <Maincube>
+          <Maincube key={movie.title}>
             <ForMark>
-              <ImgD src={movie.thumbnail.regular.small} alt="" />
-              <BookMarks>
-                <BookM src={movie.isBookmarked ? Marked : UnMarked} alt="" />
-              </BookMarks>
+              <ImgD
+                src={process.env.PUBLIC_URL + movie.thumbnail.regular.small}
+                alt=""
+              />
+              <BookM src={movie.isBookmarked ? Marked : UnMarked} alt="" />
             </ForMark>
             <MainInfo>
-              <h3>{movie.year}</h3>
-              <h3>.</h3>
-              <img
+              <Headings>{movie.year}</Headings>
+              <Headings>.</Headings>
+              <CoinImage
                 src={movie.category === "TV Series" ? Serie : Movie}
                 alt=""
               />
-              <h3>{movie.category}</h3>
-              <h3>.</h3>
-              <h3>{movie.rating}</h3>
+              <Headings>{movie.category}</Headings>
+              <Headings>.</Headings>
+              <Headings>{movie.rating}</Headings>
             </MainInfo>
             <Title>{movie.title}</Title>
           </Maincube>
@@ -51,8 +51,10 @@ const ImgD = styled.img`
   border-radius: 8px;
 `;
 
-const BookMarks = styled.div``;
-const BookM = styled.img``;
+const BookM = styled.img`
+  display: flex;
+  transform: translate(370%, -325%);
+`;
 
 const Maincube = styled.div`
   display: flex;
@@ -70,6 +72,8 @@ const MainInfo = styled.div`
   opacity: 0.75;
   display: flex;
   align-items: center;
+  display: flex;
+  margin-bottom: 4px;
 `;
 
 const Title = styled.h3`
@@ -78,3 +82,16 @@ const Title = styled.h3`
   line-height: 18px;
   color: #ffffff;
 `;
+const Headings = styled.h3`
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 14px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  margin-right: 6px;
+`;
+
+const CoinImage = styled.img`
+  margin-right: 4px;
+`

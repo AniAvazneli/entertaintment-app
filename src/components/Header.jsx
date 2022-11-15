@@ -4,13 +4,14 @@ import Avatar from "../assets/image-avatar.png";
 import Loop from "../assets/Logo.png"
 
 const Header = () => {
+  
   return (
     <HeaderDiv>
       <SvgDiv>
       <img  src={Loop} alt=""/>
       </SvgDiv>
       <Menu>
-        <li>
+        <li >
           <Link to={"/"}>
             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
               <path

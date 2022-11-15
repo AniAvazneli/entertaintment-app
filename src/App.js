@@ -13,15 +13,15 @@ import styled from "styled-components";
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header data={data}  />
       <ForPaddings>
         <Search />
         <Trending />
         <Routes>
           <Route exact path="/" element={<Home data={data} />} />
-          <Route exact path="/movies" element={<Movies />} />
-          <Route exact path="/series" element={<Series />} />
-          <Route exact path="/bookmarks" element={<Bookmarks />} />
+          <Route exact path="/movies" element={<Movies data={data}  />} />
+          <Route exact path="/series" element={<Series data={data}  />} />
+          <Route exact path="/bookmarks" element={<Bookmarks data={data}  />} />
         </Routes>
       </ForPaddings>
     </div>
