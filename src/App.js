@@ -17,11 +17,11 @@ function App() {
       <ForPaddings>
         <Search data={data}/>
         <Trending data={data} />
-        <Routes>
-          <Route exact path="/" element={<Home data={data} />} />
-          <Route exact path="/movies" element={<Movies data={data}  />} />
-          <Route exact path="/series" element={<Series data={data}  />} />
-          <Route exact path="/bookmarks" element={<Bookmarks data={data}  />} />
+        <Routes base>
+          <Route path="/entertaintment-app/" element={<Home data={data} />} />
+          <Route path="/entertaintment-app/movies" element={<Movies data={data}  />} />
+          <Route path="/entertaintment-app/series" element={<Series data={data}  />} />
+          <Route path="/entertaintment-app/bookmarks" element={<Bookmarks data={data}  />} />
         </Routes>
       </ForPaddings>
     </div>
