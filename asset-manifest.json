@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/entertaintment-app/static/css/main.a7428edb.css",
-    "main.js": "/entertaintment-app/static/js/main.552dd420.js",
+    "main.css": "/entertaintment-app/static/css/main.1209422b.css",
+    "main.js": "/entertaintment-app/static/js/main.893dc8a9.js",
     "index.html": "/entertaintment-app/index.html",
-    "main.a7428edb.css.map": "/entertaintment-app/static/css/main.a7428edb.css.map",
-    "main.552dd420.js.map": "/entertaintment-app/static/js/main.552dd420.js.map"
+    "main.1209422b.css.map": "/entertaintment-app/static/css/main.1209422b.css.map",
+    "main.893dc8a9.js.map": "/entertaintment-app/static/js/main.893dc8a9.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7428edb.css",
-    "static/js/main.552dd420.js"
+    "static/css/main.1209422b.css",
+    "static/js/main.893dc8a9.js"
   ]
 }
