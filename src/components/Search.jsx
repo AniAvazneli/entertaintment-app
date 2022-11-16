@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import Loop from "../assets/Loop.png"
+import Loop from "../assets/Loop.png";
 
 const Search = () => {
   return (
     <SearchD>
-      <SvgDiv src={Loop} alt=""/>
+      <SvgDiv src={Loop} alt="" />
       <Input placeholder="Search for movies or TV series" />
     </SearchD>
   );
@@ -17,7 +17,9 @@ const SearchD = styled.div`
   justify-content: center;
   width: 257px;
   height: 24px;
-
+  margin-top: 24px;
+  margin-bottom: 24px;
+  margin-left: 16px;
 `;
 
 const Input = styled.input`

@@ -5,6 +5,7 @@ import Movie from "../assets/Movie.png";
 import Serie from "../assets/Serie.png";
 
 const Home = ({ data }) => {
+  console.log(data)
   return (
     <Grid>
       {data.map((movie) => {
@@ -53,7 +54,10 @@ const ImgD = styled.img`
 
 const BookM = styled.img`
   display: flex;
-  transform: translate(370%, -325%);
+  /* transform: translate(370%, -325%); */
+  position: absolute;
+  top: 8px;
+  right: 8px;
 `;
 
 const Maincube = styled.div`
@@ -61,7 +65,9 @@ const Maincube = styled.div`
   flex-direction: column;
 `;
 
-const ForMark = styled.div``;
+const ForMark = styled.div`
+  position: relative;
+`;
 
 const MainInfo = styled.div`
   font-weight: 300;
@@ -94,4 +100,4 @@ const Headings = styled.h3`
 
 const CoinImage = styled.img`
   margin-right: 4px;
-`
+`;

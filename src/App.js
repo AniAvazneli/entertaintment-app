@@ -15,8 +15,8 @@ function App() {
     <div className="App">
       <Header data={data}  />
       <ForPaddings>
-        <Search />
-        <Trending />
+        <Search data={data}/>
+        <Trending data={data} />
         <Routes>
           <Route exact path="/" element={<Home data={data} />} />
           <Route exact path="/movies" element={<Movies data={data}  />} />
