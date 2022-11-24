@@ -86,33 +86,45 @@ const RecH3 = styled.h3`
   line-height: 25px;
   letter-spacing: -0.3125px;
   color: #ffffff;
+  font-family: "Outfit";
+  font-style: normal;
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 300;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 25px;
+  }
 `;
 
 const TrandingDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding-left: 16px;
+  padding-left: 25px;
   margin-bottom: 24px;
   h2 {
+    font-weight: 300;
     color: white;
+    @media screen and (min-width: 1440px){
+      margin-bottom: 25px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+    line-height: 40px;
   }
   @media screen and (min-width: 1440px) {
     width: 90vw;
   }
 `;
 
-const TrendingMovies = styled.div`
-  /* flex-direction: row;
- @media screen and (min-width: 768px) {
-    min-width: 470px;
-  } */
-`;
+const TrendingMovies = styled.div``;
 
 const ImgD = styled.img`
   width: 100%;
   height: 100%;
-  /* margin: auto; */
   border-radius: 8px;
 `;
 
@@ -138,7 +150,6 @@ const MainInfo = styled.div`
   display: flex;
   margin-bottom: 4px;
   position: absolute;
-  transform: translate(22%, 550%);
 `;
 
 const Title = styled.h3`
@@ -147,7 +158,6 @@ const Title = styled.h3`
   line-height: 18px;
   color: #ffffff;
   position: absolute;
-  transform: translate(32%, 550%);
 `;
 const Headings = styled.h3`
   font-weight: 300;

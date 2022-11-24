@@ -1,17 +1,16 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Avatar from "../assets/image-avatar.png";
-import Loop from "../assets/Logo.png"
+import Loop from "../assets/Logo.png";
 
 const Header = () => {
-  
   return (
     <HeaderDiv>
       <SvgDiv>
-      <img  src={Loop} alt=""/>
+        <img src={Loop} alt="" />
       </SvgDiv>
       <Menu>
-        <li >
+        <li>
           <Link to={"/entertaintment-app"}>
             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -65,8 +64,24 @@ const HeaderDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  width: 100%;
+  margin: auto;
   height: 56px;
+  @media screen and (min-width: 768px) {
+    height: 72px;
+    margin-top: 23px;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: column;
+    width: 96px;
+    border-radius: 20px;
+    height: 960px;
+    margin-bottom: 32px;
+    position: sticky;
+    top: 0px;
+  }
 `;
 
 const Menu = styled.ul`
@@ -77,13 +92,37 @@ const Menu = styled.ul`
   width: 133.54px;
   margin: auto;
   padding: 0%;
+  @media screen and (min-width: 1440px) {
+    flex-direction: column;
+    width: 20px;
+    height: 300px;
+    margin-top: 95px;
+  }
 `;
 const SvgDiv = styled.div`
   width: 25px;
   height: 20px;
+  @media screen and (min-width: 768px) {
+    width: 32px;
+    height: 25.6px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 32px;
+    height: 25.6px;
+    margin-top: 35px;
+  }
 `;
 
 const AvatarImage = styled.img`
   width: 24px;
   height: 24px;
+  @media screen and (min-width: 768px) {
+    width: 32px;
+    height: 32px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 40px;
+height: 40px;
+margin-bottom: 32px;
+  }
 `;
