@@ -4,10 +4,11 @@ import Marked from "../assets/Booked.png";
 import Movie from "../assets/Movie.png";
 import Serie from "../assets/Serie.png";
 
-const Home = ({ data }) => {
+const Home = ({ data, searchTerm }) => {
+  const filtered = data.filter((series) => series.title.toLowerCase().startsWith(searchTerm.toLowerCase()));
   return (
     <Grid>
-      {data.map((movie) => {
+      {filtered.map((movie) => {
         return (
           <Maincube key={movie.title}>
             <ForMark>
