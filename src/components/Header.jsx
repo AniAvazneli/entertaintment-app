@@ -66,6 +66,7 @@ const HeaderDiv = styled.div`
   padding: 16px;
   margin: auto;
   height: 56px;
+  border-radius: 10px;
   @media screen and (min-width: 768px) {
     height: 72px;
     margin-top: 23px;
