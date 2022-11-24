@@ -5,11 +5,12 @@ import Movie from "../assets/Movie.png";
 import Serie from "../assets/Serie.png";
 
 
-const Series = ({data})=>{
+const Series = ({data, searchTerm})=>{
     const onlyMovies = data.filter((series) => series.category === "TV Series");
+    const filtered = onlyMovies.filter((series) => series.title.toLowerCase().startsWith(searchTerm.toLowerCase()));
 return (
     <Grid>
-      {onlyMovies.map((movie) => {
+      {filtered.map((movie) => {
         return (
           <Maincube key={movie.title}>
             <ForMark>

@@ -1,11 +1,16 @@
 import styled from "styled-components";
 import Loop from "../assets/Loop.png";
 
-const Search = () => {
+const Search = ({searchTerm, setSearchTerm }) => {
   return (
     <SearchD>
       <SvgDiv src={Loop} alt="" />
-      <Input placeholder="Search for movies or TV series" />
+      <Input
+        placeholder="Search for movies or TV series"
+        onChange={(event) => {
+          setSearchTerm(event.target.value);
+        }}
+      />
     </SearchD>
   );
 };
@@ -20,6 +25,12 @@ const SearchD = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
   margin-left: 16px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
 `;
 
 const Input = styled.input`
@@ -31,6 +42,12 @@ const Input = styled.input`
   font-size: 16px;
   line-height: 20px;
   margin-left: 16px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  :focus{
+    border: 0px;
+  }
 `;
 const SvgDiv = styled.img`
   height: 18.00579833984375px;

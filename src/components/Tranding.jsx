@@ -22,6 +22,7 @@ const Trending = ({ data }) => {
           direction: "ltr",
           pauseOnFocus: true,
           pauseOnHover: true,
+          type: "loop",
           start: 2,
           gap: 70,
           breakpoints: {
@@ -34,12 +35,12 @@ const Trending = ({ data }) => {
               gap: 40,
             },
             768: {
-              fixedWidth: 470,
-              gap: 40,
+              fixedWidth: 240,
+              gap: 16,
             },
             500: {
               fixedWidth: 210,
-              gap: 20,
+              gap: 16,
             },
           },
         }}
@@ -47,43 +48,52 @@ const Trending = ({ data }) => {
         {tranding.map((movie) => {
           return (
             <SplideSlide key={movie.title}>
-              <TrendingMovies >
-              <ForMark>
-                <ImgD
-                  src={process.env.PUBLIC_URL + movie.thumbnail.regular.small}
-                  alt=""
-                />
-                <BookM src={movie.isBookmarked ? Marked : UnMarked} alt="" />
-              </ForMark>
-              <MainInfo>
-                <Headings>{movie.year}</Headings>
-                <Headings>.</Headings>
-                <CoinImage
-                  src={movie.category === "TV Series" ? Serie : Movie}
-                  alt=""
-                />
-                <Headings>{movie.category}</Headings>
-                <Headings>.</Headings>
-                <Headings>{movie.rating}</Headings>
-              </MainInfo>
-              <Title>{movie.title}</Title>
+              <TrendingMovies>
+                <ForMark>
+                  <ImgD
+                    src={process.env.PUBLIC_URL + movie.thumbnail.regular.small}
+                    alt=""
+                  />
+                  <BookM src={movie.isBookmarked ? Marked : UnMarked} alt="" />
+                </ForMark>
+                <MainInfo>
+                  <Headings>{movie.year}</Headings>
+                  <Headings>.</Headings>
+                  <CoinImage
+                    src={movie.category === "TV Series" ? Serie : Movie}
+                    alt=""
+                  />
+                  <Headings>{movie.category}</Headings>
+                  <Headings>.</Headings>
+                  <Headings>{movie.rating}</Headings>
+                </MainInfo>
+                <Title>{movie.title}</Title>
               </TrendingMovies>
             </SplideSlide>
           );
         })}
       </Splide>
+      <RecH3>Recommended for you</RecH3>
     </TrandingDiv>
   );
 };
 
 export default Trending;
 
+const RecH3 = styled.h3`
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.3125px;
+  color: #ffffff;
+`;
+
 const TrandingDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding-left: 16px;
-  
+  margin-bottom: 24px;
   h2 {
     color: white;
   }
@@ -93,28 +103,27 @@ const TrandingDiv = styled.div`
 `;
 
 const TrendingMovies = styled.div`
-  display: flex;
-  flex-direction: row;
+  /* flex-direction: row;
  @media screen and (min-width: 768px) {
     min-width: 470px;
-  }
+  } */
 `;
 
 const ImgD = styled.img`
-  width: 240px;
-  height: 140px;
-  margin: auto;
+  width: 100%;
+  height: 100%;
+  /* margin: auto; */
   border-radius: 8px;
 `;
 
 const BookM = styled.img`
-  display: flex;
-  transform: translate(621%, -418%);
+  position: absolute;
+  right: 16px;
+  top: 16px;
 `;
 
 const ForMark = styled.div`
-  /* margin-left: 16px;
-  margin-right: 16px; */
+  position: relative;
 `;
 
 const MainInfo = styled.div`

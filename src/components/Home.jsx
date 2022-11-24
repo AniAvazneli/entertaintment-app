@@ -5,7 +5,6 @@ import Movie from "../assets/Movie.png";
 import Serie from "../assets/Serie.png";
 
 const Home = ({ data }) => {
-  console.log(data)
   return (
     <Grid>
       {data.map((movie) => {
